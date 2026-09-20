@@ -1,42 +1,42 @@
-# PassProve — registration administration
+# PassProve — správa registrací
 
-A small Next.js/Supabase administration variant focused on registration handling.
+Menší administrační varianta v Next.js a Supabase zaměřená na registrace.
 
-**Status:** Legacy/parallel PassProve implementation retained for reference; not presented as the canonical production release.
+**Stav:** Starší nebo souběžná varianta PassProve uchovaná jako reference; nejde o označení hlavní produkční verze.
 
-## Scope
+## Co projekt obsahuje
 
-- Home/admin UI.
-- Dedicated registrations route.
-- Shared Supabase client module.
+- Úvodní administrační rozhraní.
+- Samostatná stránka registrací.
+- Sdílený modul klienta Supabase.
 
-## Technology
+## Technologie
 
 Next.js, React, TypeScript, Tailwind CSS, Supabase.
 
-## Architecture and source map
+## Architektura a struktura
 
-- `src/app/page.tsx` — entry screen
-- `src/app/registrations/page.tsx` — registration UI
-- `src/lib/supabase.ts` — data client
+- `src/app/page.tsx` — vstupní obrazovka
+- `src/app/registrations/page.tsx` — rozhraní registrací
+- `src/lib/supabase.ts` — datový klient
 
-## Local development
+## Lokální vývoj
 
-Requires Node.js and npm. From the repository root:
+Potřebujete Node.js a npm. V kořenové složce repozitáře spusťte:
 
 ```sh
 npm install
 npm run dev
 ```
 
-Build command declared by this checkout: `npm run build`.
+Příkaz pro sestavení uvedený v projektu: `npm run build`.
 
-These are the repository scripts, not a claim of a passing build. Dependency installation, build and live integrations were not executed during the documentation review.
+Jde o příkazy deklarované v repozitáři, nikoli o potvrzení úspěšného sestavení. Instalace závislostí, sestavení ani napojení na živé služby nebyly při úpravě dokumentace spuštěny.
 
-## Configuration and limitations
+## Konfigurace a omezení
 
-Verify Supabase authorization on the backend before using registration data. Both npm and pnpm lockfiles are present; select and validate one dependency workflow for future maintenance.
+Před prací s registračními údaji ověřte oprávnění na straně Supabase. Přítomné jsou soubory závislostí pro npm i pnpm; pro další údržbu zvolte a otestujte jeden postup.
 
-## Documentation next steps
+## Co doplnit do dokumentace
 
-Capture screenshots using synthetic data, document a reproducible test run, and record which integrations have been verified. Keep credentials and deployment-specific configuration outside version control.
+Snímky obrazovky s fiktivními daty, opakovatelný postup ověření a přehled skutečně otestovaných integrací. Přihlašovací údaje a konfigurace konkrétního nasazení patří mimo Git.
