@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# PassProve — registration administration
 
-## Getting Started
+A small Next.js/Supabase administration variant focused on registration handling.
 
-First, run the development server:
+**Status:** Legacy/parallel PassProve implementation retained for reference; not presented as the canonical production release.
 
-```bash
+## Scope
+
+- Home/admin UI.
+- Dedicated registrations route.
+- Shared Supabase client module.
+
+## Technology
+
+Next.js, React, TypeScript, Tailwind CSS, Supabase.
+
+## Architecture and source map
+
+- `src/app/page.tsx` — entry screen
+- `src/app/registrations/page.tsx` — registration UI
+- `src/lib/supabase.ts` — data client
+
+## Local development
+
+Requires Node.js and npm. From the repository root:
+
+```sh
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Build command declared by this checkout: `npm run build`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+These are the repository scripts, not a claim of a passing build. Dependency installation, build and live integrations were not executed during the documentation review.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Configuration and limitations
 
-## Learn More
+Verify Supabase authorization on the backend before using registration data. Both npm and pnpm lockfiles are present; select and validate one dependency workflow for future maintenance.
 
-To learn more about Next.js, take a look at the following resources:
+## Documentation next steps
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Capture screenshots using synthetic data, document a reproducible test run, and record which integrations have been verified. Keep credentials and deployment-specific configuration outside version control.
